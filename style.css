@@ -112,3 +112,19 @@ footer{
     text-align: center;
     font-size: 12px;
 }
+
+
+/* ////////////////////////////  */
+@media screen and (max-width: 768px){
+    main{
+        flex-direction: column;
+    }
+    .container{
+        width: 100%;
+    }
+    .table-container{
+        width: 100%;
+        display: none;
+    }
+    
+}
