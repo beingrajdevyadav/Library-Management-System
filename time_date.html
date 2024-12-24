@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Date and Time Table</h1>
+    <table id="dateTimeTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button onclick="addDateTime()">Add Current Date and Time</button>
+
+    <script>
+        class DateTime {
+            constructor() {
+                this.date = new Date();
+            }
+
+            getFormattedDate() {
+                return this.date.toLocaleDateString();
+            }
+
+            getFormattedTime() {
+                return this.date.toLocaleTimeString();
+            }
+        }
+
+        function addDateTime() {
+            const dateTime = new DateTime();
+            const tableBody = document.querySelector('#dateTimeTable tbody');
+            const newRow = document.createElement('tr');
+
+            const dateCell = document.createElement('td');
+            dateCell.textContent = dateTime.getFormattedDate();
+            newRow.appendChild(dateCell);
+
+            const timeCell = document.createElement('td');
+            timeCell.textContent = dateTime.getFormattedTime();
+            newRow.appendChild(timeCell);
+
+            tableBody.appendChild(newRow);
+        }
+    </script>
+</body>
+</html>

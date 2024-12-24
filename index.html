@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookish | Rajdev Yadav</title>
+
+    <!-- font awesome icons linked here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- =================================== -->
+
+    <!--      custom CSS linked here        -->
+    <link rel="stylesheet" href="style.css">
+    <!-- =================================== -->
+
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header>
+
+        <div class="date-time">
+            <p > <i class="fa-solid fa-calendar-days"></i> <span id="dateTag"></span></p>
+
+            <h3 > <i class="fa-regular fa-clock"> </i> <span id="timeTag"></span></h3>
+           
+        </div>
+
+        <h2>Welcome to Library</h2>
+            <p>Here you can manage your books and members</p>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <div class="container">
+            
+
+            <div class="form">
+
+                <h3> <i class="fa-solid fa-plus"></i> Add Transaction</h3> 
+                <hr>
+
+                <div class="form-group">
+                    <label for="studentName"><i class="fa-solid fa-user-tie"></i> Student Name :</label>
+                    <input type="text" autocomplete="off" name="student_name" placeholder="Enter Student Name"
+                        id="studentName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for=""><i class="fa-solid fa-book"></i> Book Name :</label>
+                    <input type="text" autocomplete="off" name="book_name" placeholder="Enter Book Name" required
+                        id="bookTitle">
+                </div>
+
+                <div class="form-group">
+                    <label for=""></label>
+                </div>
+
+                <div class="form-group">
+                    <label for="transactionType"><i class="fa-solid fa-arrow-right-arrow-left"></i> Transaction Type :</label>
+                    <select name="transaction_type" id="transactionType">
+                        <option value="borrow">Borrow</option>
+                        <option value="return">Return</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button id="addTransaction"> <i class="fa-solid fa-plus"></i> Add Transaction</button>
+                </div>
+                <div class="form-group">
+                    <button id="clearTransaction"> <i class="fa-solid fa-trash"></i> Clear Transaction</button>
+                </div>
+            </div>
+        </div>
+<div class="table-container">
+    <table >
+        <thead>
+            <tr>
+                <th>Sr. No. </th>
+                <th>Student Name </th>
+                <th>Book Name </th>
+                <th>Transaction Type </th>
+                <th>Transaction Date </th>
+                <th>Transaction Time </th>
+            </tr>
+        </thead>
+
+        <tbody id="transactionTableBody">
+            <!-- <tr>
+                <td>01</td>
+                <td>Rajdev Yadav</td>
+                <td>JavaScript</td>
+                <td>Borrow</td>
+                <td>2025-01-01</td>
+                <td>05:36 PM</td>
+            </tr> -->
+        </tbody>
+    </table>
+</div>
+       
+    </main>
+
+    <!-- footer section -->
+    <footer>
+        
+            <p>Made With 🎵 By Rajdev Yadav</p>
+       
+    </footer>
+
+
+    <!-- custom JS linked here -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
