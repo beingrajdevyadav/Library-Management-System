@@ -104,6 +104,11 @@ table tr:hover{
 }
 
 
+/* cards  */
+.card-container{
+    display: none;
+}
+
 /* footer  */
 footer{
     background-color: #4C585B;
@@ -126,5 +131,46 @@ footer{
         width: 100%;
         display: none;
     }
-    
+    .card-container{
+        width: 100%;
+        display: block;
+    }
+.card-container .card-container-head{
+    padding: .5rem 0;
+}
+    #cards-list{
+        flex-direction: column;
+        display: flex;
+        margin: .5rem 0;
+    }
+    .record-card{
+    background-color: #fff;
+    box-shadow: 0 0 10px #0000005c;
+    border-radius: 5px;
+    padding: 1rem;
+width: 100%;
+    }
+    .record-card h3{
+        text-transform: capitalize;
+    }
+    .student-book-card{
+        padding: .5rem 0;
+    }
+    .student-book-card h4{
+        margin-bottom: .5rem;
+    }
+    .student-book-card i{
+        margin-right: .25rem;
+    }
+    .card-date-time{
+        display: flex;
+        justify-content: space-between;
+        margin: .25rem 0 0;
+        font-size: 12px;
+    }
+
+    .total-cards{
+        text-align: center;
+        padding: .5rem 0;
+    }
 }

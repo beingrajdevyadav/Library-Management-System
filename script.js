@@ -127,7 +127,44 @@ function displayTransactions(){
         `;
         transactionTableBody.appendChild(tr);
     });
+
+
+
+
+    // ----------------------------------------------
+// function to print cards for small screen
+// ----------------------------------------------
+const transactionCardList = document.querySelector("#cards-list");
+
+transactionCardList.innerHTML = "";
+transactions.forEach((transaction, index)=>{
+const div = document.createElement("div");
+div.setAttribute("class", "record-card");
+
+div.innerHTML = `
+ <h3>${transaction.type}</h3>
+            <hr>
+            <div class="student-book-card">
+                <h4><i class="fa-solid fa-user-tie"></i> ${transaction.student.name}</h4>
+                <p><i class="fa-solid fa-book"></i> ${transaction.book.title}</p>
+            </div>
+            
+            <hr>
+            <div class="card-date-time">
+                <p><i class="fa-solid fa-calendar-days"></i> ${transaction.date} </p>
+                <p><i class="fa-regular fa-clock"></i> ${transaction.time}</p>
+            </div>
+`;
+transactionCardList.appendChild(div);
+});
+
+// ---------------------------------------
+// to show total count of records
+// -----------------------------------
+document.querySelector("#totalRecord").innerHTML = transactions.length; 
 }
+
+
 
 // ----------------------------------------------
 // function to clear transactions
